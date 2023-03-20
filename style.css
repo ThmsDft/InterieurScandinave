@@ -1,0 +1,389 @@
+
+/* -----------Main------------ */
+main{
+  z-index: 0;
+  background-color: var(--bg-color);
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1300px;
+  padding-top: 70px;
+}
+
+@media (max-width: 600px){
+  main{
+    padding-top: 0px;
+  }
+}
+
+
+/* -----------Section Head------------ */
+section.head {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+section.head div.img {
+  position: relative;
+  top: -20px;
+  width: 100%;
+  height: 100%;
+}
+
+section.head div.img img{
+  object-fit: cover;
+  object-position: bottom;
+  width: 100%;
+  height: 99%;
+}
+
+section.head div.img div.degrade1{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    var(--bg-color) 30%,
+    transparent 60%
+  );
+}
+
+section.head div.img div.degrade2{
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(
+    0deg,
+    var(--bg-color) 20%,
+    transparent
+  );
+}
+
+
+section.head div.title{
+  z-index: 2;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+section.head div.title h1{
+  font-size: 60px;
+  margin-bottom: 50px;
+}
+
+section.head div.title p{
+  font-size: 20px;
+  width: 60%;
+  margin-bottom: 50px;
+}
+
+
+section.head div.title a button{
+  border: none;
+  background: var(--secondary-color);
+  color: var(--text-color);
+  font-size: 20px;
+  padding: 20px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: linear .6s;
+}
+
+section.head div.title a button:hover{
+  background: var(--main-color);
+}
+
+
+@media (max-width: 640px){
+  section.head {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  section.head div.img {
+    position: relative;
+    top: O;
+    width: 100%;
+    height: 60%;
+  }
+  
+  section.head div.title{
+    z-index: 2;
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  section.head div.title h1{
+    text-align: center;
+    font-size: 60px;
+    line-height: 60px;
+  }
+  section.head div.title p{
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+  }
+
+  section.head div.title a{
+    text-decoration: none;
+  }
+
+  section.head div.title a button{
+    display: block;
+    margin: 0 auto;
+    font-size: 15px;
+    padding: 15px 35px;
+  }
+  
+}
+
+
+/* -----------Section Selection------------ */
+
+section.selection {
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 50px;
+  margin-top: 20px;
+}
+
+section.selection h2 {
+  margin-bottom: 30px;
+  padding-left: 50px;
+}
+
+section.selection div.container {
+  gap: 30px;
+  display: grid;
+  grid-auto-flow: column;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+section.selection div.container::-webkit-scrollbar{
+  display: none;
+}
+
+section.selection div.container div.card{
+  scroll-snap-align: center;
+}
+
+
+section.selection div.container div.card:first-child{
+  scroll-snap-align: center;
+  padding-left: 50px;
+}
+
+section.selection div.container div.card:last-child{
+  scroll-snap-align: center;
+  padding-right: 50px;
+}
+
+section.selection div.container div.card .info{
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-color);
+  height: 50px;
+  width: 250px;
+  transition: linear .3s;
+}
+
+section.selection div.container div.card:hover .info{
+  background-color: var(--secondary-color);
+}
+
+section.selection div.container div.card .info p{
+  color: var(--text-color);
+  text-align: center;
+}
+
+section.selection div.container div.card .img{
+  height: 200px;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+}
+
+section.selection div.container div.card .img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 430px){
+  section.selection h2 {
+    font-size: 30px;
+  }
+}
+
+
+
+
+
+/* -----------Section Fabricants------------ */
+
+section.fabricants {
+  padding: 0 50px;
+}
+
+section.fabricants h2{
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+
+section.fabricants div{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  row-gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+section.fabricants div a img{
+  width: 150px;
+  max-height: 100px;
+  filter: invert(41%) sepia(1%) saturate(1677%) hue-rotate(334deg) brightness(101%) contrast(82%);
+  transition: scale linear .3s;
+}
+
+section.fabricants div a img:hover{
+  filter: invert(9%) sepia(94%) saturate(6906%) hue-rotate(8deg) brightness(86%) contrast(113%);
+  scale: 1.1;
+}
+
+@media (max-width: 600px){
+
+  section.fabricants {
+    padding: 0 20px;
+  }
+
+  section.fabricants div a img{
+    width: 100px;
+    max-height: 50px;
+  }
+
+  section.fabricants div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    row-gap: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+  section.fabricants div a img{
+    width: 160px;
+    max-height: 100px;
+  }
+}
+
+@media (max-width: 430px){
+
+  section.fabricants {
+    padding: 0 20px;
+  }
+
+  section.fabricants div a img{
+    max-width: 150px;
+    max-height: 50px;
+  }
+
+  section.fabricants div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    row-gap: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+  section.fabricants div a img{
+    width: 160px;
+    max-height: 100px;
+  }
+}
+
+
+
+
+/* -----------Section Boutique------------ */
+
+section.boutique {
+  margin-top: 50px;
+  padding: 0 50px;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+section.boutique h2 {
+  margin-bottom: 40px;
+}
+
+section.boutique div{
+  width: 100%;
+  display: flex;
+  gap: 60px;
+}
+
+section.boutique div figure {
+  overflow: hidden;
+  border-radius: 10px;
+  min-width: 40%;
+}
+
+section.boutique div figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+@media (max-width: 860px){
+  section.boutique div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  section.boutique div figure {
+    overflow: hidden;
+    border-radius: 10px;
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@media (max-width: 470px){
+  section.boutique div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  section.boutique div figure {
+    overflow: hidden;
+    border-radius: 10px;
+    width: 100%;
+    height: 250px;
+  }
+
+  section.boutique {
+    padding: 0 20px;
+    padding-bottom: 50px;
+  }
+}

@@ -1,0 +1,226 @@
+/* -----------Main------------ */
+main {
+  z-index: 0;
+  background-color: var(--bg-color);
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1300px;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding-top: 0px;
+  }
+}
+
+.bg{
+  width: 100%;
+  height: 70px;
+  background-color: var(--main-color);
+}
+
+/* -----------Section Head------------ */
+section.head {
+  padding-top: 70px;
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  min-height: 400px;
+  background-color: var(--main-color);
+}
+
+section.head div.img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+section.head div.img img{
+  object-fit: cover;
+  object-position: bottom;
+  width: 100%;
+  height: 100%;
+}
+
+section.head div.img div.degrade1{
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    var(--main-color) 0%,
+    transparent 20%
+  );
+}
+
+section.head div.img div.degrade2{
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(
+    0deg,
+    var(--bg-color) 20%,
+    transparent
+  );
+}
+
+
+section.head div.title{
+  z-index: 2;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+section.head div.title h1{
+  font-size: 60px;
+  margin-bottom: 50px;
+  color: var(--text-color);
+}
+
+section.head div.title p{
+  font-size: 20px;
+  width: 60%;
+  margin-bottom: 50px;
+  color: var(--text-color);
+}
+
+
+
+@media (max-width: 640px){
+  .bg{
+    display: none;
+  }
+
+  section.head {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  section.head div.img {
+    position: relative;
+    top: O;
+    width: 100%;
+    height: 60%;
+  }
+  
+  section.head div.title{
+    z-index: 2;
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  section.head div.title h1{
+    text-align: center;
+    font-size: 60px;
+    line-height: 60px;
+  }
+  section.head div.title p{
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+  }
+
+  section.head div.title a{
+    text-decoration: none;
+  }
+}
+
+/* -----------Section catalogue------------ */
+
+section.catalogue {
+  width: 100%;
+  padding: 0 50px;
+  display: flex;
+  gap: 30px;
+}
+
+section.catalogue div.filter {
+  position: sticky;
+  top: 80px;
+  width: 150px;
+  height: 360px;
+  border: solid red;
+  transition: ease-in-out .3s;
+}
+
+section.catalogue div.filter.up {
+  top: 50px;
+}
+section.catalogue div.filter.down {
+  top: 0px;
+}
+
+section.catalogue div.articles {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding-bottom: 50px;
+}
+
+section.catalogue div.articles a{
+    text-decoration: none;
+}
+
+section.catalogue div.articles a div.card .info {
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-color);
+  height: 50px;
+  transition: linear .3s;
+}
+
+section.catalogue div.articles a div.card:hover .info{
+    background-color: var(--secondary-color);
+  }
+
+section.catalogue div.articles a div.card .info p {
+  color: var(--text-color);
+  text-align: center;
+}
+
+section.catalogue div.articles a div.card .img {
+  height: 200px;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+}
+
+section.catalogue div.articles a div.card .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 780px) {
+    section.catalogue div.filter {
+        width: 100%;
+        height: 70px;
+      }
+
+      section.catalogue {
+        width: 100%;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      section.catalogue div.articles {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      }
+
+      section.catalogue div.articles a div.card .img {
+        height: 150px;
+      }
+}

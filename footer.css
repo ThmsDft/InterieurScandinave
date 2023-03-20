@@ -1,0 +1,86 @@
+/* -----------Footer------------ */
+footer {
+    width: 100%;
+    background-color: var(--main-color);
+  }
+  
+  footer div {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+  
+  footer div > img{
+    height: 70px;
+  }
+  
+  footer div ul{
+    list-style: none;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  footer div ul li {
+    font-weight: 200;
+  }
+  
+  footer div ul li:nth-child(1) {
+    font-weight: 600;
+  }
+  
+  footer div ul li a{
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  
+  footer div ul li a:hover{
+    color: var(--bg-color);
+  }
+  
+  footer div ul li a svg{
+    width: 130px;
+    fill: var(--text-color);
+  }
+  
+  footer div ul li a svg:hover{
+    fill: var(--secondary-color);
+  }
+  
+  footer div ul li form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: end;
+  }
+  
+  footer div ul li form input[type=email]{
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: solid 1px var(--text-color);
+    padding: 0 10px;
+  }
+  
+  footer div ul li form input[type=submit]{
+    height: 40px;
+    width: 130px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: solid 2px var(--secondary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: linear .5s;
+  }
+  
+  footer div ul li form input[type=submit]:hover{
+    background-color: var(--main-color);
+  }
+  
