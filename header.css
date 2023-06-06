@@ -145,14 +145,3 @@ header {
       left: 0;
     }
   }
-  
-
-  /* -----------header Scroll Animation------------ */
-
-  .scroll-down header{
-    top: -100%;
-  }
-
-  .scroll-up header{
-    height: 50px;
-  }
